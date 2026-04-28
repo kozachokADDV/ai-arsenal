@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Personal AI Workforce — 21 агент, 85+ скилов, 7 плагинов. Архитектура персональной команды на базе Claude Code.">
+<meta name="theme-color" content="#0a0a0f">
+<title>AI COMMAND CENTER — Personal AI Workforce</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Space+Grotesk:wght@400;500;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Animated grid background -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-glow" aria-hidden="true"></div>
+<div class="scanlines" aria-hidden="true"></div>
+
+<!-- BOOT SEQUENCE OVERLAY -->
+<div class="boot-overlay" id="bootOverlay">
+  <div class="boot-content">
+    <div class="boot-line">&gt; SYSTEM INITIALIZED<span class="cursor">_</span></div>
+    <div class="boot-line">&gt; LOADING NEURAL ARCHITECTURE...</div>
+    <div class="boot-line">&gt; CONNECTING 7 PLUGINS</div>
+    <div class="boot-line">&gt; SPAWNING 21 AGENTS</div>
+    <div class="boot-line">&gt; LOADING 85+ SKILLS</div>
+    <div class="boot-line success">&gt; AI COMMAND CENTER ONLINE</div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-row">
+    <div class="logo">
+      <span class="logo-mark">◆</span>
+      <span class="logo-text">AI<span class="accent">.</span>COMMAND</span>
+    </div>
+    <nav class="site-nav">
+      <a href="#stats">Stats</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#agents">Agents</a>
+      <a href="#skills">Skills</a>
+      <a href="#plugins">Plugins</a>
+      <a href="#flow">Flow</a>
+    </nav>
+    <a class="github-pill" href="https://github.com/kozachokADDV/ai-arsenal" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.7.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+      <span>kozachokADDV</span>
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-tag">PERSONAL AI WORKFORCE / 2026</div>
+    <h1 class="hero-title">
+      <span class="glitch" data-text="AI COMMAND">AI COMMAND</span>
+      <br>
+      <span class="glitch alt" data-text="CENTER">CENTER</span>
+    </h1>
+    <p class="hero-sub">
+      Команда из <strong>21 агента</strong>, <strong>85+ скилов</strong> и <strong>7 плагинов</strong>,<br>
+      работающая в режиме оркестрации через Claude Code.<br>
+      <span class="muted">Не маркетинг. Не демо. Реальная архитектура, в продакшене.</span>
+    </p>
+    <div class="hero-cta">
+      <a href="#stats" class="btn-primary">EXPLORE THE ARSENAL ↓</a>
+      <a href="#architecture" class="btn-ghost">ARCHITECTURE MAP →</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" id="stats">
+  <div class="container">
+    <div class="section-label">// STATISTICS</div>
+    <div class="stats-grid">
+      <div class="stat-card cyan">
+        <div class="stat-num" data-target="21">0</div>
+        <div class="stat-label">Subagents</div>
+        <div class="stat-sub">1 dispatcher + 20 specialists</div>
+      </div>
+      <div class="stat-card magenta">
+        <div class="stat-num" data-target="85">0</div>
+        <div class="stat-label">Skills</div>
+        <div class="stat-sub">Trigger-activated instructions</div>
+      </div>
+      <div class="stat-card yellow">
+        <div class="stat-num" data-target="7">0</div>
+        <div class="stat-label">Plugins</div>
+        <div class="stat-sub">3 authored + 4 built-in packs</div>
+      </div>
+      <div class="stat-card purple">
+        <div class="stat-num" data-target="4">0</div>
+        <div class="stat-label">Architectures</div>
+        <div class="stat-sub">Orchestration patterns</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHITECTURE -->
+<section class="architecture" id="architecture">
+  <div class="container">
+    <div class="section-label">// ARCHITECTURE PATTERNS</div>
+    <h2 class="section-title">Четыре типа плагинов в арсенале</h2>
+    <p class="section-intro">
+      Каждый плагин решает свою задачу через один из четырёх паттернов оркестрации.
+      От самого простого (плоский набор скилов) до самого продвинутого (агент-диспетчер с подагентами).
+    </p>
+
+    <div class="arch-grid">
+      <article class="arch-card">
+        <div class="arch-tag cyan">TYPE A · MOST ADVANCED</div>
+        <h3>Agent-Orchestrated</h3>
+        <p class="arch-desc">Диспетчер-агент с собственным системным промптом анализирует запрос и делегирует подагентам-специалистам.</p>
+        <div class="arch-diagram">
+          <div class="arch-node primary">DISPATCHER</div>
+          <div class="arch-arrows">↙ ↓ ↘</div>
+          <div class="arch-row">
+            <div class="arch-node">specialist</div>
+            <div class="arch-node">specialist</div>
+            <div class="arch-node">specialist</div>
+          </div>
+        </div>
+        <div class="arch-example">
+          <span class="arch-example-label">EXAMPLE</span>
+          <code>seo-director</code>
+          <span class="arch-example-meta">1 dispatcher + 12 specialists</span>
+        </div>
+      </article>
+
+      <article class="arch-card">
+        <div class="arch-tag magenta">TYPE B · HYBRID</div>
+        <h3>Skill-Orchestrator + Agents</h3>
+        <p class="arch-desc">Скил-оркестратор управляет жизненным циклом, поочередно вызывая и подагентов, и другие скилы.</p>
+        <div class="arch-diagram">
+          <div class="arch-node primary">SKILL-ORCHESTRATOR</div>
+          <div class="arch-arrows">↙ ↓ ↘</div>
+          <div class="arch-row">
+            <div class="arch-node sm">agent</div>
+            <div class="arch-node sm">skill</div>
+            <div class="arch-node sm">agent</div>
+          </div>
+        </div>
+        <div class="arch-example">
+          <span class="arch-example-label">EXAMPLE</span>
+          <code>blog-engine-ua</code>
+          <span class="arch-example-meta">3 agents + 13 skills</span>
+        </div>
+      </article>
+
+      <article class="arch-card">
+        <div class="arch-tag yellow">TYPE C · CLASSIC</div>
+        <h3>Skill-Orchestrated</h3>
+        <p class="arch-desc">Скил-оркестратор выбирает нужный специализированный скил в той же сессии. Без отдельных подагентов.</p>
+        <div class="arch-diagram">
+          <div class="arch-node primary">ORCHESTRATOR</div>
+          <div class="arch-arrows">↙ ↓ ↘</div>
+          <div class="arch-row">
+            <div class="arch-node sm">skill</div>
+            <div class="arch-node sm">skill</div>
+            <div class="arch-node sm">skill</div>
+          </div>
+        </div>
+        <div class="arch-example">
+          <span class="arch-example-label">EXAMPLE</span>
+          <code>cfo-director</code>
+          <span class="arch-example-meta">1 orchestrator + 9 skills</span>
+        </div>
+      </article>
+
+      <article class="arch-card">
+        <div class="arch-tag purple">TYPE D · FLAT PACK</div>
+        <h3>Skill Pack</h3>
+        <p class="arch-desc">Просто набор независимых скилов без оркестратора. Активируются автоматически по триггер-словам.</p>
+        <div class="arch-diagram">
+          <div class="arch-row pack">
+            <div class="arch-node sm">skill</div>
+            <div class="arch-node sm">skill</div>
+            <div class="arch-node sm">skill</div>
+          </div>
+          <div class="arch-row pack">
+            <div class="arch-node sm">skill</div>
+            <div class="arch-node sm">skill</div>
+            <div class="arch-node sm">skill</div>
+          </div>
+        </div>
+        <div class="arch-example">
+          <span class="arch-example-label">EXAMPLES</span>
+          <code>geo-optimizer</code> · <code>designer-pro</code> · <code>engineering</code>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- AGENT ROSTER -->
+<section class="agents" id="agents">
+  <div class="container">
+    <div class="section-label">// AGENT ROSTER</div>
+    <h2 class="section-title">21 агент в строю</h2>
+    <p class="section-intro">
+      Subagents — отдельные роли Claude с собственным системным промптом. Вызываются через Agent tool, работают в изолированном контексте, возвращают результат в основную сессию.
+    </p>
+
+    <div class="filters" role="tablist">
+      <button class="filter-chip active" data-filter="all">All <span class="chip-count">21</span></button>
+      <button class="filter-chip" data-filter="builtin">Built-in <span class="chip-count">5</span></button>
+      <button class="filter-chip" data-filter="seo">SEO Director <span class="chip-count">13</span></button>
+      <button class="filter-chip" data-filter="blog">Blog Engine <span class="chip-count">3</span></button>
+      <button class="filter-chip" data-filter="dispatcher">Dispatchers <span class="chip-count">1</span></button>
+    </div>
+
+    <div class="agent-grid" id="agentGrid">
+      <!-- Built-in -->
+      <article class="agent-card builtin" data-categories="builtin">
+        <div class="agent-head"><span class="agent-dot"></span><h3>general-purpose</h3></div>
+        <div class="agent-tag">Built-in / Anthropic</div>
+        <p>Универсальный research, многошаговые задачи, поиск без специфики</p>
+      </article>
+      <article class="agent-card builtin" data-categories="builtin">
+        <div class="agent-head"><span class="agent-dot"></span><h3>Explore</h3></div>
+        <div class="agent-tag">Built-in / Anthropic</div>
+        <p>Быстрый поиск по кодовой базе — файлы, ключевые слова, структура</p>
+      </article>
+      <article class="agent-card builtin" data-categories="builtin">
+        <div class="agent-head"><span class="agent-dot"></span><h3>Plan</h3></div>
+        <div class="agent-tag">Built-in / Anthropic</div>
+        <p>Архитектурное планирование, выбор стратегии реализации, trade-offs</p>
+      </article>
+      <article class="agent-card builtin" data-categories="builtin">
+        <div class="agent-head"><span class="agent-dot"></span><h3>claude-code-guide</h3></div>
+        <div class="agent-tag">Built-in / Anthropic</div>
+        <p>Вопросы про сам Claude Code: хуки, скилы, MCP, slash-команды, SDK</p>
+      </article>
+      <article class="agent-card builtin" data-categories="builtin">
+        <div class="agent-head"><span class="agent-dot"></span><h3>statusline-setup</h3></div>
+        <div class="agent-tag">Built-in / Anthropic</div>
+        <p>Настройка status line в Claude Code</p>
+      </article>
+
+      <!-- SEO Director -->
+      <article class="agent-card dispatcher" data-categories="seo dispatcher">
+        <div class="agent-head"><span class="agent-dot star"></span><h3>seo-director</h3><span class="agent-badge">DISPATCHER</span></div>
+        <div class="agent-tag">SEO Director Plugin</div>
+        <p>Стратег-диспетчер: оценивает maturity level, выбирает приоритеты, делегирует 12 специалистам</p>
+      </article>
+      <article class="agent-card seo" data-categories="seo">
+        <div class="agent-head"><span class="agent-dot"></span><h3>seo-onboarder</h3></div>
+        <div class="agent-tag">SEO Director Plugin</div>
+        <p>Знакомство с новым сайтом — 20-мин интервью, создание site-profile</p>
+      </article>
+      <article class="agent-card seo" data-categories="seo">
+        <div class="agent-head"><span class="agent-dot"></span><h3>seo-indexation-doctor</h3></div>
+        <div class="agent-tag">SEO Director Plugin</div>
+        <p>GSC Coverage analysis, не-индексируемые URL, canonical issues, crawl budget</p>
+      </article>
+      <article class="agent-card seo" data-categories="seo">
+        <div class="agent-head"><span class="agent-dot"></span><h3>seo-technical</h3></div>
+        <div class="agent-tag">SEO Director Plugin</div>
+        <p>Технический аудит — 50+ pt checklist, redirects, sitemap, WordPress конфликты</p>
+      </article>
+      <article class="agent-card seo" data-categories="seo">
+        <div class="agent-head"><span class="agent-dot"></span><h3>seo-meta-schema</h3></div>
+        <div class="agent-tag">SEO Director Plugin</div>
+        <p>Title/description оптимизация, JSON-LD Schema, Rich Snippets</p>
+      </article>
+      <article class="agent-card seo" data-categories="seo">
+        <div class="agent-head"><span class="agent-dot"></span><h3>seo-keyword-research</h3></div>
+        <div class="agent-tag">SEO Director Plugin</div>
+        <p>Семантическое ядро, GSC mining, search intent, UA+RU specifics</p>
+      </article>
+      <article class="agent-card seo" data-categories="seo">
+        <div class="agent-head"><span class="agent-dot"></span><h3>seo-internal-linking</h3></div>
+        <div class="agent-tag">SEO Director Plugin</div>
+        <p>Внутренняя перелинковка, hub-spoke, orphan pages, anchor text</p>
+      </article>
+      <article class="agent-card seo" data-categories="seo">
+        <div class="agent-head"><span class="agent-dot"></span><h3>seo-content-eeat</h3></div>
+        <div class="agent-tag">SEO Director Plugin</div>
+        <p>E-E-A-T контент, YMYL темы, AI-content concerns, expertise signals</p>
+      </article>
+      <article class="agent-card seo" data-categories="seo">
+        <div class="agent-head"><span class="agent-dot"></span><h3>seo-core-web-vitals</h3></div>
+        <div class="agent-tag">SEO Director Plugin</div>
+        <p>LCP / INP / CLS, image optimization, JS оптимизация, LiteSpeed Cache</p>
+      </article>
+      <article class="agent-card seo" data-categories="seo">
+        <div class="agent-head"><span class="agent-dot"></span><h3>seo-hreflang-i18n</h3></div>
+        <div class="agent-tag">SEO Director Plugin</div>
+        <p>Многоязычность, hreflang, Polylang/WPML, canonical стратегия для UA/RU</p>
+      </article>
+      <article class="agent-card seo" data-categories="seo">
+        <div class="agent-head"><span class="agent-dot"></span><h3>seo-local-b2b-ua</h3></div>
+        <div class="agent-tag">SEO Director Plugin</div>
+        <p>Локальное SEO для B2B Украина: GBP, NAP, citations, локальная специфика</p>
+      </article>
+      <article class="agent-card seo" data-categories="seo">
+        <div class="agent-head"><span class="agent-dot"></span><h3>seo-geo-ai-search</h3></div>
+        <div class="agent-tag">SEO Director Plugin</div>
+        <p>GEO для AI-поиска — ChatGPT Search, Google AI Overviews, Perplexity, Bing Copilot</p>
+      </article>
+      <article class="agent-card seo" data-categories="seo">
+        <div class="agent-head"><span class="agent-dot"></span><h3>seo-feedback</h3></div>
+        <div class="agent-tag">SEO Director Plugin</div>
+        <p>Retrospective после Wave-пилотов, ROI measurement, обновление playbook'ов</p>
+      </article>
+
+      <!-- Blog Engine -->
+      <article class="agent-card blog" data-categories="blog">
+        <div class="agent-head"><span class="agent-dot"></span><h3>blog-researcher</h3></div>
+        <div class="agent-tag">Blog Engine Plugin</div>
+        <p>Исследование темы перед написанием: статистика, источники, SERP, изображения</p>
+      </article>
+      <article class="agent-card blog" data-categories="blog">
+        <div class="agent-head"><span class="agent-dot"></span><h3>blog-writer</h3></div>
+        <div class="agent-tag">Blog Engine Plugin</div>
+        <p>Написание статьи (answer-first, citation capsules, TL;DR) на украинском</p>
+      </article>
+      <article class="agent-card blog" data-categories="blog">
+        <div class="agent-head"><span class="agent-dot"></span><h3>blog-seo-reviewer</h3></div>
+        <div class="agent-tag">Blog Engine Plugin</div>
+        <p>Финальная проверка качества и SEO — 5-категорийная оценка / 100 баллов</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SKILL INVENTORY -->
+<section class="skills" id="skills">
+  <div class="container">
+    <div class="section-label">// SKILL INVENTORY</div>
+    <h2 class="section-title">85+ скилов в арсенале</h2>
+    <p class="section-intro">
+      Скилы — инструкции с триггер-словами, которые активируются автоматически или через slash-команды. В отличие от агентов, работают в текущей сессии без отдельной роли.
+    </p>
+
+    <div class="skills-groups">
+      <div class="skills-group">
+        <div class="skills-head"><h3>cfo-director</h3><span class="badge">10 skills · authored</span></div>
+        <ul class="skills-list">
+          <li>cfo-orchestrator <em>orchestrator</em></li>
+          <li>cfo-reporting</li><li>cfo-forecast</li><li>cfo-unit-economics</li>
+          <li>cfo-variance</li><li>cfo-investor-pack</li><li>cfo-tax-ua</li>
+          <li>cfo-close</li><li>cfo-onboarding</li><li>cfo-feedback</li>
+        </ul>
+      </div>
+
+      <div class="skills-group">
+        <div class="skills-head"><h3>seo-director</h3><span class="badge">6 skills · authored</span></div>
+        <ul class="skills-list">
+          <li>seo <em>orchestrator-shortcut</em></li>
+          <li>professional-foundation</li><li>system-efficiency</li>
+          <li>seo-onboarding</li><li>seo-technical</li><li>seo-indexation-doctor</li>
+        </ul>
+      </div>
+
+      <div class="skills-group">
+        <div class="skills-head"><h3>geo-optimizer</h3><span class="badge">3 skills · authored</span></div>
+        <ul class="skills-list">
+          <li>geo-specialist</li><li>geo-audit</li><li>geo-content</li>
+        </ul>
+      </div>
+
+      <div class="skills-group">
+        <div class="skills-head"><h3>blog-engine-ua</h3><span class="badge">13 skills · authored</span></div>
+        <ul class="skills-list">
+          <li>blog-engine <em>orchestrator</em></li>
+          <li>blog-write <em>orchestrator</em></li>
+          <li>blog-strategy</li><li>blog-outline</li><li>blog-photos</li>
+          <li>blog-rewrite</li><li>blog-schema</li><li>blog-calendar</li>
+          <li>blog-audit</li><li>blog-analyze</li><li>blog-seo-check</li>
+          <li>blog-repurpose</li><li>blog-feedback</li>
+        </ul>
+      </div>
+
+      <div class="skills-group">
+        <div class="skills-head"><h3>designer-pro</h3><span class="badge">5 skills · authored</span></div>
+        <ul class="skills-list">
+          <li>designer-pro <em>orchestrator</em></li>
+          <li>prompt-builder</li><li>brief-collector</li>
+          <li>image-generator</li><li>mood-board</li>
+        </ul>
+      </div>
+
+      <div class="skills-group">
+        <div class="skills-head"><h3>engineering</h3><span class="badge">10 skills · built-in</span></div>
+        <ul class="skills-list">
+          <li>tech-debt</li><li>system-design</li><li>standup</li>
+          <li>deploy-checklist</li><li>testing-strategy</li><li>debug</li>
+          <li>incident-response</li><li>architecture</li>
+          <li>code-review</li><li>documentation</li>
+        </ul>
+      </div>
+
+      <div class="skills-group wide">
+        <div class="skills-head"><h3>anthropic-skills</h3><span class="badge">~30 skills · built-in pack</span></div>
+        <ul class="skills-list compact">
+          <li>schedule</li><li>prompt-builder</li><li>system-efficiency</li>
+          <li>proposal-configurator</li><li>web-artifacts-builder</li><li>wordpress-senior</li>
+          <li>seo-copywriter</li><li>audit-scan</li><li>professional-foundation</li>
+          <li>brief-collector</li><li>docx</li><li>mcp-builder</li><li>pdf</li>
+          <li>image-generator</li><li>pptx</li><li>skill-creator</li>
+          <li>python-debugger</li><li>canvas-design</li><li>consolidate-memory</li>
+          <li>theme-factory</li><li>xlsx</li><li>python</li>
+          <li>seo-architect</li><li>designer-pro</li><li>google-ads-expert</li>
+          <li>algorithmic-art</li><li>setup-cowork</li><li>pos-display-designer</li>
+          <li>ua-specialist</li><li>reclamaster-project</li>
+        </ul>
+      </div>
+
+      <div class="skills-group">
+        <div class="skills-head"><h3>cowork-plugin-management</h3><span class="badge">2 skills</span></div>
+        <ul class="skills-list">
+          <li>create-cowork-plugin</li><li>cowork-plugin-customizer</li>
+        </ul>
+      </div>
+
+      <div class="skills-group">
+        <div class="skills-head"><h3>narrow tools</h3><span class="badge">3 skills</span></div>
+        <ul class="skills-list">
+          <li>self-improvement</li><li>smm-content-maker</li><li>seo-senior-specialist</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLUGINS -->
+<section class="plugins" id="plugins">
+  <div class="container">
+    <div class="section-label">// PLUGIN ECOSYSTEM</div>
+    <h2 class="section-title">7 плагинов: 3 авторских + 4 built-in</h2>
+
+    <div class="plugins-grid">
+      <article class="plugin-card authored">
+        <div class="plugin-tag cyan">AUTHORED · v0.1.0</div>
+        <h3>cfo-director</h3>
+        <div class="plugin-meta">10 skills · 0 agents · Type C</div>
+        <p>Fractional CFO для малого и среднего бизнеса в Украине. Полный жизненный цикл финансовой функции — от первого знакомства с бизнесом до пакета для инвестора. С самообучением.</p>
+        <div class="plugin-tags">
+          <span class="tag">P&amp;L · CF · BS</span>
+          <span class="tag">13-week forecast</span>
+          <span class="tag">Unit economics</span>
+          <span class="tag">UA tax</span>
+          <span class="tag">Self-learning</span>
+        </div>
+      </article>
+
+      <article class="plugin-card authored">
+        <div class="plugin-tag magenta">AUTHORED · v0.2.3</div>
+        <h3>seo-director</h3>
+        <div class="plugin-meta">6 skills · 13 agents · Type A · most advanced</div>
+        <p>Senior SEO Director с sub-agent архитектурой. Главный диспетчер делегирует 12 специалистам. Self-learning: learnings + patterns + antipatterns + site-profiles. WordPress + Polylang + B2B UA.</p>
+        <div class="plugin-tags">
+          <span class="tag">Sub-agent architecture</span>
+          <span class="tag">Wave-based pilots</span>
+          <span class="tag">GSC integration</span>
+          <span class="tag">Maturity ladder</span>
+          <span class="tag">Self-learning</span>
+        </div>
+      </article>
+
+      <article class="plugin-card authored">
+        <div class="plugin-tag yellow">AUTHORED · v0.5.0</div>
+        <h3>geo-optimizer</h3>
+        <div class="plugin-meta">3 skills · 0 agents · Type D · WordPress MCP</div>
+        <p>GEO (Generative Engine Optimization) toolkit. Aудит AI-readiness, оптимизация под ChatGPT Search, Google AI Overviews, Perplexity, Claude, Gemini. WordPress MCP с JWT Bearer auth.</p>
+        <div class="plugin-tags">
+          <span class="tag">AI search visibility</span>
+          <span class="tag">FAQPage Schema</span>
+          <span class="tag">llms.txt</span>
+          <span class="tag">JWT auth</span>
+        </div>
+      </article>
+
+      <article class="plugin-card builtin">
+        <div class="plugin-tag purple">BUILT-IN</div>
+        <h3>blog-engine-ua</h3>
+        <div class="plugin-meta">13 skills · 3 agents · Type B · hybrid</div>
+        <p>Полный жизненный цикл блога: стратегия → outline → ресёрч → написание → SEO-проверка → schema → перепрофилирование под соцсети.</p>
+        <div class="plugin-tags">
+          <span class="tag">7 формaтов контента</span>
+          <span class="tag">Citation capsules</span>
+        </div>
+      </article>
+
+      <article class="plugin-card builtin">
+        <div class="plugin-tag purple">BUILT-IN</div>
+        <h3>designer-pro</h3>
+        <div class="plugin-meta">5 skills · 0 agents · Type C</div>
+        <p>Senior-дизайнер: бриф, концепт, промпты для Midjourney / DALL-E / Nano Banana Pro. POS, реклама, бренд-зоны.</p>
+        <div class="plugin-tags">
+          <span class="tag">Multi-model prompts</span>
+          <span class="tag">Mood boards</span>
+        </div>
+      </article>
+
+      <article class="plugin-card builtin">
+        <div class="plugin-tag purple">BUILT-IN</div>
+        <h3>engineering</h3>
+        <div class="plugin-meta">10 skills · 0 agents · Type D</div>
+        <p>Software engineering toolkit: code review, system design, debugging, incident response, ADR, deploy checklists.</p>
+        <div class="plugin-tags">
+          <span class="tag">Code review</span>
+          <span class="tag">Architecture</span>
+        </div>
+      </article>
+
+      <article class="plugin-card builtin">
+        <div class="plugin-tag purple">BUILT-IN</div>
+        <h3>anthropic-skills</h3>
+        <div class="plugin-meta">~30 skills · 0 agents · Type D</div>
+        <p>Универсальный pack от Anthropic: xlsx, pdf, docx, pptx, python, MCP-builder, skill-creator, theme-factory и десятки других.</p>
+        <div class="plugin-tags">
+          <span class="tag">Document tools</span>
+          <span class="tag">Code &amp; data</span>
+          <span class="tag">Creative</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="plugins-note">
+      <span class="lock-icon">⊘</span>
+      Это информативная презентация архитектуры. Исходники и .plugin файлы здесь не публикуются — только описание возможностей системы.
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS / FLOW -->
+<section class="flow" id="flow">
+  <div class="container">
+    <div class="section-label">// HOW IT WORKS</div>
+    <h2 class="section-title">Как работает оркестрация</h2>
+
+    <ol class="flow-steps">
+      <li class="flow-step">
+        <div class="flow-num">01</div>
+        <div class="flow-content">
+          <h4>Открытие сессии в рабочей папке</h4>
+          <p>Пользователь стартует Claude Code сессию, выбирая working directory под задачу (M1-Magazin / SEO_Developer / CFO_Plugin / другая).</p>
+        </div>
+      </li>
+      <li class="flow-step">
+        <div class="flow-num">02</div>
+        <div class="flow-content">
+          <h4>Загрузка контекста</h4>
+          <p>Claude автоматически читает: глобальный <code>~/.claude/CLAUDE.md</code> + проектный <code>./CLAUDE.md</code> + память проекта (журналы, профили, аудиты).</p>
+        </div>
+      </li>
+      <li class="flow-step">
+        <div class="flow-num">03</div>
+        <div class="flow-content">
+          <h4>Активация скилов или агентов</h4>
+          <p>По триггер-словам в запросе — активируются скилы. Для стратегических задач — вызывается диспетчер-агент через Agent tool.</p>
+        </div>
+      </li>
+      <li class="flow-step">
+        <div class="flow-num">04</div>
+        <div class="flow-content">
+          <h4>Делегирование специалистам</h4>
+          <p>Диспетчер (например seo-director) анализирует ситуацию, выбирает 1-3 подагентов, передаёт им задачу с полным контекстом.</p>
+        </div>
+      </li>
+      <li class="flow-step">
+        <div class="flow-num">05</div>
+        <div class="flow-content">
+          <h4>Результат + обучение</h4>
+          <p>Подагенты возвращают результаты диспетчеру. Тот синтезирует ответ. В конце сессии — записывает уроки в lessons-learned, обновляет patterns &amp; site-profiles.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-row">
+    <div class="footer-left">
+      <div class="logo small">
+        <span class="logo-mark">◆</span>
+        <span class="logo-text">AI<span class="accent">.</span>COMMAND</span>
+      </div>
+      <p class="muted">Personal AI Workforce / 2026</p>
+    </div>
+    <div class="footer-mid">
+      <p>Built with <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude Code</a></p>
+      <p class="muted small">21 agents · 85+ skills · 7 plugins</p>
+    </div>
+    <div class="footer-right">
+      <a href="https://github.com/kozachokADDV/ai-arsenal" target="_blank" rel="noopener" class="github-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.7.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
