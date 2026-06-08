@@ -30,14 +30,14 @@
     const target = parseInt(el.dataset.target, 10);
     const duration = 1400;
     const start = performance.now();
-    const suffix = el.dataset.suffix || ''; // explicit suffix, no auto "+"
+    const isPlus = target >= 85; // 85+ animation hint
     const tick = (now) => {
       const t = Math.min(1, (now - start) / duration);
       const eased = 1 - Math.pow(1 - t, 3);
       const value = Math.floor(eased * target);
-      el.textContent = value + (t === 1 ? suffix : '');
+      el.textContent = value + (isPlus && t === 1 ? '+' : '');
       if (t < 1) requestAnimationFrame(tick);
-      else el.textContent = target + suffix;
+      else el.textContent = target + (isPlus ? '+' : '');
     };
     requestAnimationFrame(tick);
   };
@@ -77,7 +77,7 @@
   // ----------------------------------------------------------------
   // FADE-IN ON SCROLL (cards & sections)
   // ----------------------------------------------------------------
-  const fadeTargets = document.querySelectorAll('.stat-card, .arch-card, .agent-card, .skills-group, .plugin-card, .flow-step, .tg-card, .lib-stat, .lib-div, .found-card');
+  const fadeTargets = document.querySelectorAll('.stat-card, .arch-card, .agent-card, .skills-group, .plugin-card, .flow-step');
   fadeTargets.forEach((el) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
@@ -164,6 +164,6 @@
   // CONSOLE EASTER EGG
   // ----------------------------------------------------------------
   console.log('%c◆ AI COMMAND CENTER', 'font-size: 24px; font-weight: 900; color: #00f0ff; text-shadow: 0 0 10px #00f0ff;');
-  console.log('%cTelegram AI 24/7 · 4 authored plugins · 212 agents · 136 skills', 'color: #ff006e; font-family: monospace;');
+  console.log('%c21 agents · 85+ skills · 7 plugins', 'color: #ff006e; font-family: monospace;');
   console.log('%cKonami code activates retro mode 🟧', 'color: #fff200; font-family: monospace;');
 })();
