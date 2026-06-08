@@ -77,7 +77,7 @@
   // ----------------------------------------------------------------
   // FADE-IN ON SCROLL (cards & sections)
   // ----------------------------------------------------------------
-  const fadeTargets = document.querySelectorAll('.stat-card, .arch-card, .agent-card, .skills-group, .plugin-card, .flow-step, .tg-card, .lib-stat, .lib-div, .found-card');
+  const fadeTargets = document.querySelectorAll('.stat-card, .arch-card, .agent-card, .skills-group, .plugin-card, .flow-step, .tg-card, .lib-stat, .lib-div, .found-card, .emp-card');
   fadeTargets.forEach((el) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
